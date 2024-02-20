@@ -71,9 +71,17 @@ section {
 
 .home-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     object-fit: contain;
+    margin-top: 6rem;
+}
+
+.home-content_2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* object-fit: contain; */
     margin-top: 6rem;
 }
 
@@ -180,10 +188,60 @@ span {
 
 .counting {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     font-size: 30px;
     margin-top: 10px;
 }
+
+
+/* css for skills  */
+
+.box4 {
+    padding: 40px;
+    color: #001C55;
+}
+
+.box41 {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.skills-list div {
+    background: var(--text-color);
+    padding: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.skills-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.skills-list div h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.skills-list div:hover {
+    background: #001C55;
+    color: #E0E0E0;
+    transform: translateY(-10px);
+}
+
+
+/* css for skills  */
 
 @media (max-width: 580px) {
     body {
