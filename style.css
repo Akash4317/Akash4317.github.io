@@ -28,7 +28,7 @@ body {
 }
 
 section {
-    min-height: 85vh;
+    /* min-height: 85vh; */
     padding: 5rem 9% 5rem 9%;
     margin: 2rem;
 }
