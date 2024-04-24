@@ -95,7 +95,9 @@ section {
     gap: 15px;
 }
 
-.content-items>p {
+.content-items p {
+    margin-top: 15px;
+    /* background-color: yellow; */
     max-width: 42vw;
 }
 
@@ -263,14 +265,23 @@ span {
 }
 
 .project-container .project-box {
-    flex: 1 1 30rem;
+    width: 400px;
     background: var(--text-color);
-    padding: 3rem 2rem 4rem;
+    padding: 0rem 0 3rem;
     border-radius: 2rem;
     text-align: center;
-    /* border: .2rem solid var(--main-color); */
     transition: 0.3s ease-in-out;
     box-shadow: 2rem 2rem 5rem #272f2f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-container .project-box img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .project-container .project-box:hover {
@@ -290,6 +301,31 @@ span {
     font-size: 1.5rem;
 }
 
+.project-container .project-box .tech-stack {
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.project-container .project-box .tech-stack h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-container .project-box .tech-stack ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-container .project-box .tech-stack ul li {
+    background-color: #f4f4f4;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+}
+
 .project-container .project-box .btn1 {
     transition: 0.3s ease-in-out;
 }
@@ -300,8 +336,12 @@ span {
     color: var(--text-color);
 }
 
-.project-container .project-box>a {
-    margin-right: 25px;
+.project_anchor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 
@@ -585,6 +625,7 @@ span {
     color: #f4f4f4;
     padding: 1rem;
     text-align: center;
+    margin-bottom: -140px;
 }
 
 .social-links i {
@@ -685,47 +726,51 @@ span {
 
 .contact-form form {
     position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
 }
 
-.contact-form form input,
-form textarea {
-    border: none;
-    outline: none;
-    width: 90%;
-    padding: 18px;
-    /* background: #555557; */
-    color: #000;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
+.contact-form div {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .contact-form textarea {
-    resize: none;
-    height: 220px;
+    resize: vertical;
+    height: 150px;
 }
 
-.contact-form form .send {
-    display: inline-block;
-    padding: 14px 60px;
-    background: #0ef;
-    border-radius: 40px;
-    font-size: 18px;
-    color: #001b29;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+.contact-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0ef;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.contact-form form .send:hover {
-    background: #0ef;
-    color: #081b29;
-    box-shadow: 0 0 20px #0ef;
+.contact-form input[type="submit"]:hover {
+    background-color: #0bd;
 }
 
 .last-text p {
@@ -749,6 +794,45 @@ form textarea {
     font-size: 20px;
     padding: 10px;
     border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+    }
+    .contact-text,
+    .contact-form {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .contact-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-text h4 {
+        font-size: 1.5em;
+    }
+    .contact-text p {
+        font-size: 0.9em;
+    }
+    .contact-list li {
+        font-size: 0.9em;
+    }
+    .social-links a {
+        margin: 0 10px;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 @media (max-width: 1200px) {
