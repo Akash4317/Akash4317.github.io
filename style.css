@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -115,6 +116,7 @@ section {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -200,47 +202,33 @@ span {
 
 /* css for skills  */
 
-.box4 {
-    padding: 40px;
-    color: #001C55;
-}
-
-.box41 {
-    width: fit-content;
-    margin: auto;
-    text-align: center;
-}
-
-.skills-list {
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
 }
 
-.skills-list div {
-    background: var(--text-color);
-    padding: 40px;
-    font-size: 15px;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+.skill-card {
+    background: var(--second-bg-color);
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    transition: 0.3s ease;
 }
 
-.skills-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
-.skills-list div h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
+.skill-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.skills-list div:hover {
-    background: #001C55;
-    color: #E0E0E0;
-    transform: translateY(-10px);
+.skill-card p {
+    font-size: 1.4rem;
+    opacity: 0.9;
 }
 
 
@@ -800,15 +788,18 @@ span {
     .contact {
         flex-direction: column;
     }
+
     .contact-text,
     .contact-form {
         margin-right: 0;
         margin-bottom: 20px;
     }
+
     .contact-list {
         flex-direction: column;
         gap: 10px;
     }
+
     .social-links {
         justify-content: center;
     }
@@ -818,15 +809,19 @@ span {
     .contact-text h4 {
         font-size: 1.5em;
     }
+
     .contact-text p {
         font-size: 0.9em;
     }
+
     .contact-list li {
         font-size: 0.9em;
     }
+
     .social-links a {
         margin: 0 10px;
     }
+
     .contact-form input[type="text"],
     .contact-form input[type="email"],
     .contact-form textarea {
@@ -845,9 +840,11 @@ span {
     .header {
         padding: 2rem 3%;
     }
+
     section {
         padding: 10rem 3% 2rem;
     }
+
     .footer {
         padding: 2rem;
     }
@@ -857,6 +854,7 @@ span {
     #menu-icon {
         display: block;
     }
+
     .navbar {
         position: absolute;
         top: 100%;
@@ -868,31 +866,90 @@ span {
         box-shadow: 0.5rem 1rem rgba(0, 0, 0, .2);
         display: none;
     }
+
     .navbar.active {
         transition: 0.3s ease-in-out;
         display: block;
     }
+
     .navbar a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
     }
+
     .home-content {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
     }
+
     .home-content h3 {
         font-size: 2.6rem;
     }
+
     .home-content h1 {
         font-size: 5rem;
     }
+
     .home-img img {
         height: 200px;
         width: 70vw;
         margin-top: 4rem;
         align-items: ce;
     }
+}
+
+/* experience css */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.experience-card {
+    background: var(--second-bg-color);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem rgba(0, 238, 255, 0.15);
+}
+
+.experience-card h3 {
+    font-size: 2.4rem;
+}
+
+.experience-card h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.exp-duration {
+    font-size: 1.4rem;
+    opacity: 0.8;
+}
+
+.experience-card ul {
+    margin-top: 1.5rem;
+    padding-left: 2rem;
+}
+
+.experience-card ul li {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-used {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+}
+
+
+.summary-strip {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    border-left: 5px solid var(--main-color);
 }
